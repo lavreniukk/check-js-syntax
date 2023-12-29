@@ -12,6 +12,22 @@ const eslint = new ESLint({
       es2022: true,
       node: true,
     },
+    rules: {
+      'no-console': 'error',
+      'no-empty': 'error',
+      'no-extra-parens': 'warn',
+      'no-const-assign': 'error',
+      'no-unused-vars': 'error',
+      'semi': ['error', 'always'],
+      'no-var': 'warn',
+      'max-len': ['warn', { code: 100 }],
+      'no-unreachable': 'warn',
+      'no-inline-comments': 'warn',
+      'no-undef': 'warn',
+      'no-tabs': 'warn',
+      'no-extra-semi': 'warn',
+      'no-magic-numbers': ['warn', { ignore: [-1, 0, 1] }],
+    },
   },
 });
 
@@ -28,7 +44,7 @@ const checkSyntax = async (req, res) => {
     if (!result) {
       throw new Error('Linter failed');
     }
-
+console.log(result);
     res.status(200).send(result);
   } catch (error) {
     console.error(error);

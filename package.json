@@ -11,8 +11,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@uiw/react-textarea-code-editor": "^3.0.2",
+    "chart.js": "^4.4.1",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

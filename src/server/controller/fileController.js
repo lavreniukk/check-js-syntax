@@ -1,5 +1,4 @@
 const getJsFileContent = async (req, res) => {
-    console.log('file');
     try {
         const { file } = req.body;
 
